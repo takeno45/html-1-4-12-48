@@ -10,7 +10,7 @@ require_once('common.php');
 // URLから社員のIDを取得する
 $id = $_GET['id'];
 
-// データベースから該当する社員の情報を取得する
+// データベースから該当する社員の情報を取得する　database.php　getsyainより取得
 $member = $db->getsyain($id);
 
 // ページの上部を表示する（見出しとして"社員情報の削除"を設定）

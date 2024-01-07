@@ -7,7 +7,7 @@ define('PASS', 'root');
 // データベース操作を行うクラス
 class Database
 {
-  // PDOインスタンスを保持するプライベート変数
+  // PDOインスタンスを保持するプライベート変数 PDOを使うと、データベースとのやり取りが簡単にできるようになる
   private $pdo;
 
   // データベースに接続するプライベートメソッド
@@ -90,7 +90,7 @@ class Database
   return false;
  }
 
- // 新しい社員を作成するメソッド
+ // 新しい社員を作成するメソッド　　 全体として、このクラスは社員情報に関連する一連のCRUD（Create, Read, Update, Delete）操作をデータベース上で行うためのメソッドを提供します。
  function createsyain($id, $name, $age, $work)
  {
   try{
