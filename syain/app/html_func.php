@@ -1,5 +1,5 @@
 <?php
-// ページの上部を表示する関数
+// ①ページの上部を表示する関数
 function show_top($heading = '社員一覧')
 {
     // HTMLの開始部分を出力する
@@ -18,7 +18,7 @@ function show_top($heading = '社員一覧')
 TOP;
 }
 
-// ページの下部を表示する関数
+// ②ページの下部を表示する関数
 function show_down($return = false)
 {
     // 戻るボタンを表示する場合
@@ -32,7 +32,7 @@ function show_down($return = false)
 BOTTOM;
 }
 
-// 社員リストを表示する関数
+// ③社員リストを表示する関数
 function show_syainlist($members)
 {
     // テーブルの開始部分を出力する
@@ -47,7 +47,7 @@ function show_syainlist($members)
     echo '<button><a href="syain_create.php">社員情報の追加</a></button>';
 }
 
-// 新規社員情報作成フォームを表示する関数
+// ④新規社員情報作成フォームを表示する関数
 function show_create($id = '', $name = '', $age = '', $work = '', $status = 'create', $button = '登録')
 {
     // エラーメッセージを取得する
@@ -72,7 +72,7 @@ function show_create($id = '', $name = '', $age = '', $work = '', $status = 'cre
 FORM;
 }
 
-// 社員情報を表示する関数
+// ⑤社員情報を表示する関数
 function show_syain($member)
 {
     // テーブルの開始部分を出力する

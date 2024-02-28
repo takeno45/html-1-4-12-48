@@ -4,21 +4,21 @@
 // エラーを画面に表示する
 // ini_set('display_errors', 1);
 
-// 共通関数を含むファイルを読み込む
+// ①共通関数を含むcommon.phpファイルを読み込む
 require_once('common.php');
 
-// URLから社員のIDを取得する
+// ②URLから社員のIDを取得する
 $id = $_GET['id'];
 
-// データベースから該当する社員の情報を取得する　database.php　getsyainより取得
+// ③データベースから該当する社員の情報を取得する Database.php
 $member = $db->getsyain($id);
 
-// ページの上部を表示する（見出しとして"社員情報の削除"を設定）
+// ④ページの上部を表示する（見出しとして"社員情報の削除"を設定）
 show_top("社員情報の削除");
 
-// 社員情報を表示する
+// ⑤社員情報を表示するフォームを生成
 show_create($member["id"], $member["name"], $member["age"], $member["work"], "delete", "削除");
 
-// ページの下部を表示する（戻るボタンを表示）
+// ⑥ページの下部を表示する（戻るボタンを表示）
 show_down(true);
 ?>

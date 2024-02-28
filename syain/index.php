@@ -6,15 +6,20 @@
 // POSTデータをダンプする
 // var_dump($_POST);
 
-// 共通関数を含むファイルを読み込む
+// ①common.phpを読み込む
 require_once('common.php');
 
-// データベースから全社員のリストを取得する
+// ②データベースから全社員のリストを取得する　 DBからgetallsyainを呼び出し、$membersに代入 Databass.php
 $members = $db->getallsyain();
-// ページの上部を表示する
+
+// ③ページの上部を表示する html_func.php  show_top関数
 show_top();
-// 社員リストを表示する
+
+// ④社員リストを表示する html_func.php
 show_syainlist($members);
-// ページの下部を表示する
+// ⑤ページの下部を表示する 社員情報の追加 html_funk.php
 show_down();
 ?>
+
+<!-- 名前をクリックするとsyain_edit.php　社員情報に移動 -->
+<!-- 社員情報追加ボタンを押すと syain_create.php　社員情報追加ページに移動-->

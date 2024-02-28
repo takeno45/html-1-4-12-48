@@ -1,22 +1,23 @@
 <?php
-// データベース操作を行うクラスを含むファイルを読み込む
+//① データベース操作を行うクラスを含むファイルを読み込む
 require_once('app/Database.php'); //Database.phpの内容を取り込むためのPHPの機能
-// HTML生成関数を含むファイルを読み込む
+//②HTML生成関数を含むファイルを読み込む
 require_once('app/html_func.php');//html_func.phpの内容を取り込むためのPHPの機能
-// 入力チェック関数を含むファイルを読み込む
+//③入力チェック関数を含むファイルを読み込む
 require_once('app/check.php');//check.phpの内容を取り込むためのPHPの機能
-// エラーメッセージを取得する関数
+//④エラーメッセージを取得する関数 だが、エラーが出るまでは実行されない
 function get_error()
 {
-  // エラーメッセージを初期化する
+  // エラーメッセージを初期化
+  // GETパラメータにエラーメッセージが存在する場合、エラーを返す
   $error = "";
-  // GETパラメータにエラーメッセージが存在する場合、それを取得する
+  
   if (isset($_GET["error"])){
     $error = $_GET["error"];
   }
-  // エラーメッセージを返す
+ 
   return $error;
 }
-// データベース接続を確立する
-$db = new Database();// Databaseクラスのインスタンスを作成
+// ⑤データベース接続を確立する このページではこの部分が実行される
+$db = new Database();// Databaseクラスのインスタンスを作成して$dbに代入
 ?>

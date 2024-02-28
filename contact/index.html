@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="header-logo01">
+          <h1 class="header_logo">ここには会社名が入ります</h1>
+          <div class="header_btn">
+            <a href="../index.html" class="header_btn01">Home</a>
+            <a href="#" class="header_btn02">お問合せ</a>
+          </div>
+        </div>
+        <div class="header_nav">
+          <ul class="header_nav_list">
+            <li><a href="#" class="header_nav_li">メニュー01</a></li>
+            <li><a href="#" class="header_nav_li">メニュー02</a></li>
+            <li><a href="#" class="header_nav_li">メニュー03</a></li>
+          </ul>
+        </div>
+        <div class="header_main_img">
+          <img src="./img/mv.png" class="mv_img" />
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="sec_01">
+        <!-- <div class="wrapper"> -->
+        <div class="sec_01_content">
+          <h1 class="sec_01_title">お問い合わせ</h1>
+          <p class="sec_01_p">
+            お問合せや業務内容に関するご質問は、電話またはこちらのお問合せフォームより承っております。<br />
+            後ほど担当者よりご連絡させて頂きます。
+          </p>
+        </div>
+        <!-- </div> -->
+      </div>
+      <!-- sec_02 ------------------------------- -->
+      <div class="sec_02">
+        <form action="task8-1.php" method="post" novalidate>
+          <div class="form-row">
+            <div class="form-label">
+              <label for="onamae">お名前</label>
+              <span>必須</span>
+            </div>
+
+            <input
+              type="text"
+              id="onamae"
+              name="onamae"
+              placeholder=" 山田 太朗"
+            />
+          </div>
+          <div class="form-row">
+            <div class="form-label">
+              <label for="furigana">フリガナ</label>
+              <span>必須</span>
+            </div>
+            <input
+              type="text"
+              id="furigana"
+              name="furigana"
+              placeholder=" ヤマダタロウ"
+            />
+          </div>
+          <div class="form-row">
+            <div class="form-label">
+              <label for="email">メールアドレス:</label>
+              <span>必須</span>
+            </div>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              placeholder="info@fast-creademy.jp"
+            />
+          </div>
+          <div class="form-row">
+            <div class="form-label">
+              <label for="tel">電話番号</label>
+              <span>必須</span>
+            </div>
+            <input type="text" id="tel" name="tel" placeholder="0000000000" />
+          </div>
+          <div class="form-row">
+            <div class="form-label">
+              <label for="koumoku">お問合せ項目</label>
+              <span>必須</span>
+            </div>
+            <select name="koumoku" id="koumoku">
+              <option value="">選択してください</option>
+              <option value="資料請求">資料請求</option>
+              <option value="会社案内">会社案内</option>
+              <option value="求人募集">求人募集</option>
+              <option value="給料について">給料について</option>
+              <option value="仕事内容">仕事内容</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-label">
+              <label for="naiyou">お問い合わせ内容</label>
+              <span>必須</span>
+            </div>
+            <textarea
+              id="naiyou"
+              name="naiyou"
+              rows="5"
+              placeholder="お問い合わせ内容をこちらにご記入ください"
+            ></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-label">
+              <label for="checkbox">個人情報保護方針</label>
+              <span>必須</span>
+            </div>
+            <!-- <input type="checkbox" id="check" name="example" placeholder="個人情報保護方針" required> -->
+            <label
+              ><input type="checkbox" name="policy[]" value="policy" />
+              <u>個人情報保護方針 </u
+              ><span class="material-symbols-outlined"> news </span
+              >に同意します。</label
+            >
+          </div>
+
+          <div class="form-row">
+            <div class="form-label_confirmation">
+              <button type="submit">確認</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <!-- .sec_btn ------------------------------------------ -->
+      <div class="sec_btn">
+        <div class="wrapper">
+          <div class="sec_btn_box">
+            <div class="sec_btn_content">
+              <h2 class="sec_btn_h2">ここからご購入ください</h2>
+              <a href="#" class="sec_btn_a_1">ネットショップ</a>
+            </div>
+            <div class="sec_btn_content">
+              <h2 class="sec_btn_h2">お気軽にお問合せください</h2>
+              <a href="#" class="sec_btn_a_2">お問い合せ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- sec_03 ---------------------------------- -->
+      <div class="sec_03">
+        <h3 class="sec_03_h3">ここには会社名が入ります</h3>
+        <p class="sec_03_p">住所が入ります</p>
+        <p class="sec_03_p">03-1234-5678</p>
+        <p class="sec_03_p">営業時間:9:00～18:00</p>
+      </div>
+      <!-- sec_04 -------------------------------- -->
+      <div class="sec_04">
+        <div class="wrapper">
+          <div class="sec_04_link">
+            <a href="#">リンク01</a>
+            <a href="#">リンク02</a>
+            <a href="#">リンク03</a>
+            <a href="#">リンク04</a>
+            <a href="#">リンク05</a>
+            <a href="#">リンク06</a>
+          </div>
+          <div class="sec_04_linl_02">
+            <a href="#" class="sec_04_li_07">リンク07</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer --------------------------------- -->
+    <footer>
+      <div class="footer">
+        <p>ここには会社名がはいります&copy;Copyright.</p>
+      </div>
+    </footer>
+  </body>
+</html>
